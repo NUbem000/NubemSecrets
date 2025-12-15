@@ -1,0 +1,33 @@
+{
+  "name": "nubemsecrets",
+  "version": "1.0.0",
+  "description": "NubemSecrets - Secure secrets management with OAuth",
+  "main": "server/index.js",
+  "scripts": {
+    "dev:server": "NODE_ENV=development nodemon server/index.js",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "start": "NODE_ENV=production node server/index.js",
+    "install:all": "npm install && cd client && npm install"
+  },
+  "keywords": ["secrets", "oauth", "security"],
+  "author": "NubemSystems",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "dotenv": "^16.3.1",
+    "morgan": "^1.10.0",
+    "@google-cloud/secret-manager": "^5.0.0",
+    "connect-redis": "^7.1.0",
+    "redis": "^4.6.10",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
